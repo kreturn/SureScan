@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Image Processing</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:White;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+      </property>
+      <property name="title">
+       <string>Operations</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QPushButton" name="saveButton">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string>Save image</string>
+         </property>
+         <property name="icon">
+          <iconset theme="QIcon::ThemeIcon::DocumentSave"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="loadButton">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string>Load image</string>
+         </property>
+         <property name="icon">
+          <iconset theme="QIcon::ThemeIcon::DocumentNew"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4" rowspan="2">
+        <widget class="QTextEdit" name="logInfo">
+         <property name="minimumSize">
+          <size>
+           <width>480</width>
+           <height>0</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="grayButton">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string>Gray scale</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="flipButton">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string>Flip upside down</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" colspan="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>318</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>267</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="clearButton">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string>Clear image</string>
+         </property>
+         <property name="icon">
+          <iconset theme="QIcon::ThemeIcon::EditClear"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="originalGrpBox">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>460</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(10,15,200);
+font-size:20px;
+text-align: center;</string>
+      </property>
+      <property name="title">
+       <string>Before</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="originalImg">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>480</width>
+           <height>640</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>480</width>
+           <height>640</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+   color: rgb(136, 143, 232); 
+font-size:35px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QGroupBox" name="afterGrpBox">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>460</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(10,15,200); 
+font-size:20px;
+text-align: center;</string>
+      </property>
+      <property name="title">
+       <string>After</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="editedImg">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>480</width>
+           <height>640</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>480</width>
+           <height>640</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:white;
+   color: rgb(136, 143, 232); 
+font-size:35px;
+text-align: center;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
